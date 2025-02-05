@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>א.מ. הנדסה וניהול פרוייקטים בע"מ</title>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            direction: rtl;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            text-align: center;
+            margin: 1rem 0;
+            color: #1a365d;
+        }
+
+        /* Layout & Sections */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .hero {
+            background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('/api/placeholder/1200/400') center/cover;
+            opacity: 0.1;
+            animation: pulse 4s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: #e2e8f0;
+            margin-bottom: 2rem;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #48bb78;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #38a169;
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        /* About Section */
+        .about {
+            background: #f7fafc;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Projects Section */
+        .projects {
+            background: #edf2f7;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e0;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>א.מ. הנדסה וניהול פרוייקטים בע"מ</h1>
+            <h2>כשמובילים את הפרוייקט, ההצלחה היא חלק מהתכנון</h2>
+            <a href="#contact" class="cta-button">צור קשר לקבלת ייעוץ ראשוני</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>על החברה</h2>
+            <p>א.מ. הנדסה וניהול פרו, בבעלות וניהול המהנדס איל ניצן, פועלת מאז שנת 2002 ומובילה מגוון רחב של פרויקטים הנדסיים משמעותיים בכל רחבי הארץ. החברה מתמחה בניהול כולל של פרויקטי תשתיות, מבני ציבור, תשתיות עירוניות ומערכות מים, ביוב וניקוז.</p>
+            <p>אנו מספקים שירותים החל מניהול תכנון וביצוע, דרך פיקוח צמוד ועד לבקרה תקציבית ושמירה על איכות גבוהה ועמידה בזמנים.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>תחומי האחריות שלנו</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>תשתיות</h3>
+                    <p>כבישים, גשרים, מעברים תת-קרקעיים, פיתוח שכונות ומערכות מים, ביוב וניקוז.</p>
+                </div>
+                <div class="service-card">
+                    <h3>מבנים ומוסדות ציבור</h3>
+                    <p>ניהול ופיקוח על מבני מסחר, משרדים, בתי אבות ומוסדות ציבוריים.</p>
+                </div>
+                <div class="service-card">
+                    <h3>שטחים ציבוריים</h3>
+                    <p>פיתוח טיילות, גנים, מערכות השקיה ותאורה, רמזורים ושבילים.</p>
+                </div>
+                <div class="service-card">
+                    <h3>בקרה תקציבית</h3>
+                    <p>ניתוח אומדני עלויות פיתוח, ניהול תקציבי ותמיכה ברשויות מקומיות.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="about">
+        <div class="container">
+            <h2>למה אנחנו?</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>ניסיון רב-שנים ומומחיות</h3>
+                    <p>מאות פרויקטים מוצלחים ברחבי הארץ.</p>
+                </div>
+                <div class="service-card">
+                    <h3>בקרה תקציבית ואיכות</h3>
+                    <p>פתרונות לניהול עלויות ותכנון מבוקר שמבטיחים חיסכון ואמינות.</p>
+                </div>
+                <div class="service-card">
+                    <h3>צוות מומחים</h3>
+                    <p>מהנדסים, הנדסאים וכלכלנים מיומנים ומוסמכים בפרויקטי תשתיות ובנייה מורכבים.</p>
+                </div>
+                <div class="service-card">
+                    <h3>מענה אישי ומדויק</h3>
+                    <p>כל פרויקט מנוהל עם תיאום מלא בין כל הגורמים, מהשטח ועד למשרד הראשי.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2>פרויקטים מובילים</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="/api/placeholder/600/400" alt="שכונת עיר ימים">
+                    <div class="project-content">
+                        <h3>שכונת עיר ימים - נתניה</h3>
+                        <p>פיתוח ותשתיות לשכונה עם 4,000 יח"ד על שטח של 920 דונם.</p>
+                        <p>היקף כספי: כ-400 מיליון ₪</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="/api/placeholder/600/400" alt="שכונת גלי הים">
+                    <div class="project-content">
+                        <h3>שכונת גלי הים - נתניה</h3>
+                        <p>פיתוח לשכונה עם 2,500 יח"ד וייצוב מצוק לאורך טיילת המצוק.</p>
+                        <p>עלות: כ-17 מיליון ₪</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="/api/placeholder/600/400" alt="בית ספר חטיבת ביניים">
+                    <div class="project-content">
+                        <h3>בית ספר חטיבת ביניים - עיר ימים</h3>
+                        <p>הקמת שלב א' של 48 כיתות וביצוע מבני תיכון נוספים.</p>
+                        <p>שטח בנוי: 10,000 מ"ר</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="/api/placeholder/600/400" alt="כבישים וצמתים מרכזיים">
+                    <div class="project-content">
+                        <h3>כבישים וצמתים מרכזיים - נתיבי ישראל</h3>
+                        <p>• כביש 672 באזור צומת רמת השופט (הושלם במרץ 2014)</p>
+                        <p>• כביש 395 מקיבוץ צובה עד גבעת יערים</p>
+                        <p>• כביש 90 באזור צומת המושבה כנרת</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>צור קשר</h2>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">שם מלא</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">אימייל</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">הודעה</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">שלח הודעה</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 א.מ. הנדסה וניהול פרוייקטים בע"מ. כל הזכויות שמורות.</p>
+            <p>איל ניצן | Eyal@emeng.co.il</p>
+        </div>
+    </footer>
+</body>
+</html>
